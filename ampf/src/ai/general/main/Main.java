@@ -49,25 +49,30 @@ public class Main {
             }
         }
         else { // if no 2nd argument, use fixed seed:
-            RandomSingleton.seed( 1234567 );
+            RandomSingleton.seed( 1234 );
         }
 
 
         // Hardcode the demo for debug convenience:
-//        demo = 2;//10;//9;//8;//10;//7;
+//        demo = 2;//10;//9;//8;//10;//7; other demos removed
+
+        String prefix = "Adaptive SOM MPF: ";
 
         switch( demo ) {
-            case 1: DemoRGBSOM1MM.run( "Adaptive SOM MPF: RGB->SOM->1st Order Markov Model", 300 ); // fast, predictive
-            case 2: DemoLines.run( "Adaptive SOM MPF: Moving Pattern Recognition Demo: SOM->RSOM pair", 100 );
-//            case 3: DemoWords.run( "Adaptive SOM MPF: Words/VOMM", 300, false );
-            case 3: DemoWords.run( "Adaptive SOM MPF: Words/VOMM", 300, true );
-            case 4: DemoRockPaperScissors.run( "Adaptive SOM MPF: Rocks,Paper,Scissors" );
+            case 1: DemoRGBSOM1MM.run( prefix+"RGB->SOM->1st Order Markov Model", 300 ); break;
+            case 2: DemoLines.run( prefix+"Moving Line Recognition Demo: SOM->RSOM pair", 100 ); break;
+            case 3: DemoWords.run( prefix+"Word Recognition (VoMM)", 300, false ); break;
+            case 4: DemoRockPaperScissors.run( prefix+"Rocks,Paper,Scissors Game" ); break;
+            default: help();
         }
 
-        // EXPECTED OUTPUT ERROR:
-        // 3 words-1st: 0.26+- 0.01 10,000 iters ie predicts 74%.
-        // 3 words-variable: 0.21+-0.01 10,000 iters 5% improvement 78-79%
-        // 4 rps - err<=0.06
+        // EXPECTED OUTPUTS:
+        // ---------------------------------------------------------------------
+        // #1 rgb:       @ T=2950, err=0.15499847412109374
+        // #2 lines:     @ T=11926, described models exist
+        // #3 words-1mm: @ T=9912, Error(m)=0.26287353515625      73.72% correct
+        // #3 words-vmm: @ T=10308, Error(m)=0.19597596740722656  80.40% correct
+        // $4 rps:       @ T=61809, Error(n)=0.0175
     }
 
     private static void help() {
@@ -80,7 +85,7 @@ public class Main {
                  + "------------------------------------------------------------\n"
                  + "java ampf.jar N [R]\n"
                  + "\n"
-                 + "... where N is an integer between 1 and 6 and R is an\n"
+                 + "... where N is an integer between 1 and 4 and R is an\n"
                  + "optional parameter. If R is given, the random number \n"
                  + "generator will be seeded with the time, whereas by default\n"
                  + "a fixed seed is used. If fixed, you get exactly the same\n"
@@ -90,7 +95,15 @@ public class Main {
                  + "paper titled:\n"
                  + " 'Generating Adaptive Behaviour \n"
                  + "  within a Memory-Prediction Framework'.\n"
-                 + "\n";
+                 + "\n"
+                 + "While the demos are running, the following keyboard commands\n"
+                 + "make it easier to track what is happening:\n"
+                 + "  'f' Makes the demos iterate faster\n"
+                 + "  'l' Makes the demos iterate slower\n"
+                 + "  'p' Pauses the demos until\n"
+                 + "  'r' Resumes the demos;\n"
+                 + "  's' Runs one iteration (step) and then pauses.\n";
+
         System.err.println( s );
     }
 }
