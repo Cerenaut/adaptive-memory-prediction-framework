@@ -48,14 +48,14 @@ public class WindowRewardCorrelator extends DelayedRewardCorrelator {
                 int relativePosition = position -_delay;
                 double distance = distance( relativePosition, length-_delay );
                 double weight = updateWeight( distance );
-System.out.println( "    correlating index "+n+" @ position "+position+" of "+length+ " having dist="+distance+" weight="+weight );
+//System.out.println( "    correlating index "+n+" @ position "+position+" of "+length+ " having dist="+distance+" weight="+weight );
 
                 Volume v = _dff._queue.get( n );
                 updateCorrelation( v, weight );
             }
-            else {
-System.out.println( "NOT correlating index "+n+" @ position "+position+" of "+length );
-            }
+//            else {
+//System.out.println( "NOT correlating index "+n+" @ position "+position+" of "+length );
+//            }
 
             ++position;
 

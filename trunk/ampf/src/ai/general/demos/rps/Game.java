@@ -218,7 +218,7 @@ public class Game implements Iterative, AdaptiveSignal {
         _ds.update(); // update derivative reward from this reward value
         _error.update( (float)( 1.0 - reward() ) );
 
-        System.out.println( "Error(n)="+_error.mean()+" Error(1)="+(1.0-reward()) );
+        System.out.println( "T="+_s1._t+" Error(n)="+_error.mean()+" Error(1)="+(1.0-reward()) );
     }
 
 
@@ -288,7 +288,7 @@ public class Game implements Iterative, AdaptiveSignal {
         _s2.call();
         _s3.call();
         _s4.call();
-        System.out.println( "s1.elapsed="+_s1.elapsed()+" "+_s2.elapsed()+" "+_s3.elapsed()+" "+_s4.elapsed() );
+//        System.out.println( "s1.elapsed="+_s1.elapsed()+" "+_s2.elapsed()+" "+_s3.elapsed()+" "+_s4.elapsed() );
     }
 }
 
