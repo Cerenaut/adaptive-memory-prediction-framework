@@ -54,7 +54,7 @@ public class Main {
 
 
         // Hardcode the demo for debug convenience:
-//        demo = 2;//10;//9;//8;//10;//7; other demos removed
+//        demo = 4;//10;//9;//8;//10;//7; other demos removed
 
         String prefix = "Adaptive SOM MPF: ";
 

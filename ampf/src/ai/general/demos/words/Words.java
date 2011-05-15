@@ -100,8 +100,8 @@ public class Words implements Iterative {
         _s1.call();
         _s2.call();
 
-        System.out.println( "T="+_s1._t+" elapsed="+_s1.elapsed() );
-        System.out.println( "T="+_s2._t+" elapsed="+_s2.elapsed() );
+//        System.out.println( "T="+_s1._t+" elapsed="+_s1.elapsed() );
+//        System.out.println( "T="+_s2._t+" elapsed="+_s2.elapsed() );
 
         Volume v = _w.next();
 
@@ -111,7 +111,8 @@ public class Words implements Iterative {
         error /= volume;
 
         _error.update( (float)error );
-        System.out.println( "Error(m)="+_error.mean()+" Error(1)="+error ); // @ 1400 mean=0.23 vomm
+//        System.out.println( "Error(m)="+_error.mean()+" Error(1)="+error ); // @ 1400 mean=0.23 vomm
+        System.out.println( "T="+_s1._t+" Error(n)="+_error.mean()+" Error(1)="+error );
 
         _nu._vif.copy( v );
         _nu.ff();
