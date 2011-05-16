@@ -14,7 +14,7 @@ import ai.general.util.ui.DemoUI;
  */
 public class DemoRockPaperScissors {
 
-    public static void run( String title ) {
+    public static void run( String title, boolean adaptive ) {
 
         boolean variableOrder = false;//true;
         Strategy s = null;
@@ -27,7 +27,7 @@ public class DemoRockPaperScissors {
 //        }
 //        s = new PersistentStrategy();
 
-        Game g = new Game( s, variableOrder  );
+        Game g = new Game( s, variableOrder, adaptive );
         RPSPainter rpsp = new RPSPainter( g );
 
         DemoUI d = new DemoUI( title );

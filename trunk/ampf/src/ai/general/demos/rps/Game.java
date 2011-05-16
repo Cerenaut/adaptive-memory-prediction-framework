@@ -63,10 +63,12 @@ public class Game implements Iterative, AdaptiveSignal {
     public Traversal _t; // [fn+da]-br1-nu1-br2-rc-br3-nu3
 
 
-    public Game( Strategy s, boolean variableOrder ) {
+    public Game( Strategy s, boolean variableOrder, boolean adaptive ) {
 
         super();
 
+        _adaptive = adaptive;
+        
         int schedule1 = 1000;
         int schedule2 = 1500;
         int schedule3 = 2000;
