@@ -62,7 +62,7 @@ public class Main {
             case 1: DemoRGBSOM1MM.run( prefix+"RGB->SOM->1st Order Markov Model", 300 ); break;
             case 2: DemoLines.run( prefix+"Moving Line Recognition Demo: SOM->RSOM pair", 100 ); break;
             case 3: DemoWords.run( prefix+"Word Recognition (VoMM)", 300, true ); break;
-            case 4: DemoRockPaperScissors.run( prefix+"Rocks,Paper,Scissors Game" ); break;
+            case 4: DemoRockPaperScissors.run( prefix+"Rocks,Paper,Scissors Game", true ); break;
             default: help();
         }
 
