@@ -51,7 +51,7 @@ public class WordsPainter extends Painting implements Paintable {//, KeyListener
         int mw = (int)( Math.sqrt( mv ) );
         int mh = mv / mw;
 
-        boolean paintLabels = false;//true;
+        boolean paintLabels = true;//true;
 
         paintGraph( g2d,
             Painting.g( c, g, 1 ),
