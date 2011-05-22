@@ -43,7 +43,7 @@ public class RPSPainter extends Painting implements Paintable {//, KeyListener {
         int c = ( _w - ((cols+1)*g) ) / cols;// >> 1; // cell
         int m = c / sizeI; // model size
 
-        boolean paintLabels = false;//true;
+        boolean paintLabels = true;//true;
 
         g2d.setColor( new Color( 208,255,00 ) );
         g2d.fillRect( g( c, g, 2 ), 0, g( c, g, 6 )-g( c, g, 3 ), _h );
