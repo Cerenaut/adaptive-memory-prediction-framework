@@ -12,3 +12,8 @@ PDF:
 http://www.plosone.org/article/fetchObjectAttachment.action?uri=info%3Adoi%2F10.1371%2Fjournal.pone.0029264&representation=PDF
 
 All code is written in Java. Full source code for a Kohonen-SOM MPF implementation is provided, along with extensions for adaptive behaviour generation and several demonstration programs. The paper & code also demonstrate variable-order prediction of future states within the SOM-based MPF.
+
+
+
+Mozilla Public License 1.1
+https://www.mozilla.org/MPL/
